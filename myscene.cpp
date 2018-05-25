@@ -244,7 +244,7 @@ void myscene::erase()
     if(seekG(rx,ry)==NULL && seekC(rx,ry)==NULL) return;
 
     matrix[rx/UNIT][ry/UNIT]=NULL;
-    for(int a=0; 16; a++){
+    for(int a=0; a<16; a++){
         if(cars.value(a)->exists && cars.value(a)->X==rx && cars.value(a)->Y==ry){
             euros-=CARCOST;
             changeMoney();
@@ -252,6 +252,7 @@ void myscene::erase()
             return;
         }
     }
+
     for(int a=0; a<tracks.count(); a++){
         if(tracks.value(a)->X==rx && tracks.value(a)->Y==ry){
             euros-=ERASECOST/10;
@@ -260,6 +261,7 @@ void myscene::erase()
             return;
         }
     }
+    qDebug()<< "d";
     for(int a=0; a<houses.count(); a++){
         if(houses.value(a)->X==rx && houses.value(a)->Y==ry){
             euros-=ERASECOST;
@@ -268,6 +270,7 @@ void myscene::erase()
             return;
         }
     }
+    qDebug()<< "e";
 }
 
 int myscene::distance(myelement *p1, myelement *p2)
