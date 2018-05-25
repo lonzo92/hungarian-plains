@@ -149,6 +149,7 @@ void MainWindow::start()
     if(scene==NULL) return;
     S.setNum(scene->seed);
     ui->lineEdit->setText(S);
+    ui->grabButton->setEnabled(true);
 }
 
 void MainWindow::on_grabButton_clicked()

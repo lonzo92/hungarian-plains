@@ -57,7 +57,7 @@
          <item row="0" column="0">
           <widget class="QPushButton" name="grabButton">
            <property name="enabled">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
            <property name="sizePolicy">
             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
