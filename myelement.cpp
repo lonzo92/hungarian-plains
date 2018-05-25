@@ -5,7 +5,7 @@ int lx(int out){return (out%2==0 ? out==0 ? 0 : 0 : out==1 ? 1: -1)*UNIT;}
 
 int ly(int out){return (out%2==0 ? out==0 ? -1 : 1 : out==1 ? 0: 0)*UNIT;}
 
-float factor=1/MOVEMENTS;
+float factor = 1 / MOVEMENTS;
 
 bool myelement::selfStop=true;
 myPixmapVector* myelement::mpv=NULL;
