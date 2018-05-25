@@ -1,0 +1,89 @@
+Train Maker is a 2D railway game where you can place tracks, stations, houses, and train cars.
+Every 30 seconds the game performs a set of actions which include creating payloads in the
+stations that can be picked up by cars and brought to their destination in exchange for a reward.
+And a decrease in the available money to pay for the maintenance of tracks, stations and cars.
+
+1- Placing items on the scene:
+Before beginning, click on the "grab keyboard" button on the top, this will reroute all your
+keyboard signals to the game, to release the keyboard, press the button again, or simply
+press the space key on your keyboard.
+
+Now that the game receives all the keyboard inputs, with the arrow keys you will be able to
+move the dark semi-transparent square, that acts as a cursor for the scene, you can also
+change it's position by double clicking anywhere on the scene. We will refer to this square
+as the cursor.
+Remember that placing and erasing items on the scene will decrease the money available.
+    
+Every item, including cars, has a definite keyboard key that tells the scene to place
+such item where the cursor is;
+    -tracks:
+        Z- crossing 
+        X- curve
+        C- straight
+        V- switch OFF
+        B- reverse switch OFF
+        Cost 10$ Maintenance 1$
+        switches can be turned on by right clicking on them
+        
+    -stations:
+        N- places station without payload
+        Cost 200$ Maintenance 20$
+    -houses:
+        M- places random house with random orientation
+        Cost 100$
+    -cars:
+        the first two rows of keys are devoted to the car controls.
+        that is the keys:
+        QWERTYUI
+        ASDFGHJK
+        every car is identified by one of these letters.
+        if a car does not exist in the whole scene, pressing the relative key will place
+        one where the cursor is standing. Unlike the previous items, cars can be picked up
+        and replaced with the use of the mouse, this will also delete any eventual payload
+        they were carrying.
+        Cost 50$ Maintenance 5$
+        
+2- Rotating, removing items, other keys:
+    Shift: Pressing it, will cause the item under the cursor, to rotate 90° clockwise.
+    In case the item happens to be a house, it will randomize its aspect.
+    
+    Canc: (Delete for some keyboards) will cause the item beneath the cursor to be erased.
+    Cost 5$
+    
+    Comma: causes all switch tracks to reset to their original OFF state
+    
+    Alt:   causes the timer to halt, and the game to pause.
+    
+    Space: releases the keyboard, returning to the normal state.
+    
+    Ctrl:  if pressed together with a car key, tells the car to reverse engine
+    
+3- Controlling cars:
+    Once the car we wish to control is placed, we must consider that each car has
+    three speed settings
+    -1 reverse
+     0 still
+     1 forward
+    the state of each car can be seen on the left of the window, and also be controlled from there.
+    The main feature to control cars is the keyboard though, pressing the corrisponding key will
+    tell the car to switch one gear onward, while pressing together Ctrl and the car key, will tell the car
+    to switch one gear backwards.
+    So for each state
+    original speed       speed after pressing car key        speed after pressing car key and Ctrl
+    -1                      0                                               -1
+     0                      1                                               -1
+     1                      1                                                0
+     
+4- The payload system:
+    Every 30 seconds the system uses your budget to pay the Maintenance fees for tracks stations and cars.
+    It also creates payloads that are placed in the stations, every payload has a destination, the payload
+    value, and therefore the reward, are proportional to the number of houses surrounding the sending
+    station, and the distance in straight line between the sending, and receiving station.
+    Your goal is to stop a car near the sending station, pick up the payload, and guide the car to its
+    destination, stop again to unload the payload, and receive the reward which will added to your budget.
+    
+    Ticking the Self Stop button on top will cause cars to stop automatically when one of these conditions is met:
+    -A car carrying a payload is passing next to its destination
+    -A car with no payload is passing next to a station with a payload
+    
+Lay your tracks, build your towns, and have fun!

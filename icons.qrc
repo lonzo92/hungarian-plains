@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>trainIcons/names</file>
+        <file>trainIcons/cars.png</file>
+        <file>trainIcons/infrastructures.png</file>
+        <file>trainIcons/Nuova cartella/crossing.png</file>
+        <file>trainIcons/carL.png</file>
+    </qresource>
+</RCC>
